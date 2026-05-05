@@ -40,19 +40,6 @@ def next_invoice_number(explicit: str | None) -> str:
 def build_context(
     cfg: dict, month: MonthRange, invoice_number: str, timesheet_url: str | None
 ) -> dict:
-    preamble = cfg.get("notes_preamble", "").strip()
-    if timesheet_url:
-        notes = (
-            f"{preamble} Here is the link to the timesheet for the associated "
-            f"month of {month.human} - {timesheet_url}"
-        )
-    else:
-        notes = f"{preamble} Timesheet for {month.human} (link unavailable)."
-
-    total_line = cfg["total"]
-    if cfg.get("payment_suffix"):
-        total_line = f"{total_line} {cfg['payment_suffix']}"
-
     return {
         "sender_name": cfg["sender"]["name"],
         "sender_address": cfg["sender"]["address"],
@@ -66,7 +53,7 @@ def build_context(
         "items": cfg["items"],
         "notes_preamble": cfg.get("notes_preamble", "").strip(),
         "month_human": month.human,
-        "timesheet_url": timesheet_url or "(unavailable)",
+        "timesheet_url": timesheet_url,
         "total": cfg["total"],
         "payment_suffix": cfg.get("payment_suffix", ""),
     }
