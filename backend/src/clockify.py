@@ -17,12 +17,12 @@ def create_shared_report(start: str, end: str, name: str) -> str:
     url = f"{REPORTS_HOST}/workspaces/{WORKSPACE_ID}/shared-reports"
     headers = {"X-Api-Key": API_KEY, "Content-Type": "application/json"}
     payload = {
-        "name": "Test - delete me",
+        "name": name,
         "isPublic": True,
         "type": "SUMMARY",
         "filter": {
-            "dateRangeStart": "2026-03-01T00:00:00.000Z",
-            "dateRangeEnd": "2026-03-31T23:59:59.000Z",
+            "dateRangeStart": start,
+            "dateRangeEnd": end,
             "users": {
                 "contains": "CONTAINS",
                 "ids": [USER_ID],
@@ -46,14 +46,11 @@ def create_shared_report(start: str, end: str, name: str) -> str:
             "amountShown": "HIDE_AMOUNT",
         },
     }
-    print("Sending payload:", json.dumps(payload, indent=2))
     response = requests.post(url, json=payload, headers=headers, timeout=90)
-
     if not response.ok:
         print("STATUS:", response.status_code)
         print("BODY:", response.text)
         response.raise_for_status()
-
     data = response.json()
     for key in ("sharedUrl", "url", "publicUrl"):
         if data.get(key):
@@ -61,8 +58,7 @@ def create_shared_report(start: str, end: str, name: str) -> str:
     if "id" in data:
         return f"https://app.clockify.me/shared/{data['id']}"
     raise RuntimeError(f"Unexpected Clockify response: {data}")
-
-
+    
 if __name__ == "__main__":
     # Smoke test: create a shared link for March 2026
     url = create_shared_report(

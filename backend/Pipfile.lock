@@ -1,7 +1,7 @@
 {
     "_meta": {
         "hash": {
-            "sha256": "dac3d51d28d7c7d671a927fe61b699ab2306703ab82887d8c5c9b4a72883ba6d"
+            "sha256": "c92ed1836d04b54bd722f0f105006139d4cbcc78aa1b130391324238b092e1e5"
         },
         "pipfile-spec": 6,
         "requires": {
@@ -16,6 +16,23 @@
         ]
     },
     "default": {
+        "appscript": {
+            "hashes": [
+                "sha256:0306c09f55f799716fc2badd072b16538a797d2acbc3ea2adc55553293d18188",
+                "sha256:0396978b95e06c2cabba117cc172add1df188c51a1b80fc6648aad16890a84c8",
+                "sha256:1a5747425d2a5732e2854cab0d0dc893ef077cabd7d57f7ec4caea2ac313e19f",
+                "sha256:48d961f83be1de6aa9286d0cfae2060d3ded4302902873d34cd45ca2757c50b3",
+                "sha256:5efce3302c00674b769b79938cc5f66f7791ef45c6419e850a5f1c8f9fcefcc1",
+                "sha256:6ab3be221cf5e798fe1a1930b93c4b791c5cae4e5fd781cb9fb6e35fb7930274",
+                "sha256:7710db497d279d819f487dea686866b56c6c1e557befef4631b78553c523334c",
+                "sha256:8edab6b8def4862c9582e5d8f5f72c23a3749f2d059f80e4b5ae101a53805116",
+                "sha256:b2c6fc770bf822ea45529c7084bc0ee340e67ab260016b01d28e0449ec8723be",
+                "sha256:ddecaff061f829fcfe5b0452a272f9aa5ac1f61b3929fa18b6f0f100e8eaf306",
+                "sha256:de0b644f1b86f05d7526e5621bd2fcf36f077fc90fd328e63ba12dd3e267eb9e"
+            ],
+            "markers": "sys_platform == 'darwin'",
+            "version": "==1.4.0"
+        },
         "certifi": {
             "hashes": [
                 "sha256:027692e4402ad994f1c42e52a4997a9763c646b73e4096e4d5d6db8af1d6f0fa",
@@ -166,6 +183,15 @@
             ],
             "index": "pypi",
             "version": "==0.1.0"
+        },
+        "docx2pdf": {
+            "hashes": [
+                "sha256:00be1401fd486640314e993423a0a1cbdbc21142186f68549d962d505b2e8a12",
+                "sha256:6d2c20f9ad36eec75f4da017dc7a97622946954a6124ca0b11772875fa86fbed"
+            ],
+            "index": "pypi",
+            "markers": "python_version >= '3.5'",
+            "version": "==0.1.8"
         },
         "docxtpl": {
             "hashes": [
@@ -468,6 +494,14 @@
             "index": "pypi",
             "markers": "python_version >= '3.9'",
             "version": "==2.32.5"
+        },
+        "tqdm": {
+            "hashes": [
+                "sha256:7d825f03f89244ef73f1d4ce193cb1774a8179fd96f31d7e1dcde62092b960bb",
+                "sha256:ee1e4c0e59148062281c49d80b25b67771a127c85fc9676d3be5f243206826bf"
+            ],
+            "markers": "python_version >= '3.7'",
+            "version": "==4.67.3"
         },
         "typing-extensions": {
             "hashes": [

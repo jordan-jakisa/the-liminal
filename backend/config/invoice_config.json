@@ -1,0 +1,32 @@
+{
+  "sender": {
+    "name": "Jordan Mungujakisa",
+    "address": "Kampala, Uganda"
+  },
+  "client": {
+    "name": "PaperCheck GmbH",
+    "address_line1": "Neugasse 15",
+    "address_line2": "6300 Zug",
+    "address_line3": "Switzerland",
+    "email": "yves@papercheck.ai"
+  },
+  "items": [
+    {
+      "description": "Papercheck tasks",
+      "quantity": "1 month",
+      "price": "CHF 805",
+      "tax": "0",
+      "amount": "CHF 805"
+    },
+    {
+      "description": "Subscriptions (e.g ChatGPT)",
+      "quantity": "1 month",
+      "price": "CHF 20",
+      "tax": "0",
+      "amount": "CHF 20"
+    }
+  ],
+  "total": "CHF 825",
+  "payment_suffix": "(To be paid in Ugandan Shillings, UGX)",
+  "notes_preamble": "The attached invoice covers tasks completed in the Papercheck.ai app project."
+}

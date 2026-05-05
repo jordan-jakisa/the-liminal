@@ -8,6 +8,7 @@ docxtpl = "*"
 clockify-api-client = "*"
 python-dotenv = "*"
 requests = "*"
+docx2pdf = "*"
 
 [dev-packages]
 
